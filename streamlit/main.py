@@ -4,6 +4,7 @@ import cv2
 import tempfile
 import os
 from yolo_utils import load_yolo, detect_yolo
+from faster_rcnn_utils import load_faster_rcnn, detect_faster_rcnn
 from PIL import Image
 
 
@@ -44,8 +45,9 @@ def main():
             st.write("Selected model: ", option)
             model = load_yolo(model_path=model_link)
         else:
-            model_link = os.path.join(model_path, "fasterrcnn_person.pth")
+            model_link = "https://huggingface.co/muh-arif21/faster_rcnn/resolve/main/fasterrcnn_person.pth"
             st.write("Selected model: ", option)
+            model = load_faster_rcnn(model_path=model_link)
     else:
         st.write("Please select your model")
 
@@ -64,9 +66,10 @@ def main():
             if st.button("Run Detection"):
                 if "yolo" in option.lower():
                     result_img = detect_yolo(model, image)
-                # else:
-                #     result_img = detect_faster_rcnn(image, model)
-                result_img = cv2.cvtColor(result_img, cv2.COLOR_BGR2RGB)
+                    result_img = cv2.cvtColor(result_img, cv2.COLOR_BGR2RGB)
+                else:
+                    result_img = detect_faster_rcnn(model, image)
+                
                 st.image(result_img, caption="Detection Result",
                          use_container_width=True)
 
