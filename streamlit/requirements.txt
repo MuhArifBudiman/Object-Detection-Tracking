@@ -1,7 +1,39 @@
-opencv_python==4.12.0.88
-opencv_python_headless==4.12.0.88
-opencv_python_headless==4.10.0.84
-Pillow==12.0.0
-streamlit==1.50.0
-ultralytics==8.3.220
-ultralytics==8.3.223
+# Upgrade pip
+pip>=25.3
+
+# Streamlit core
+streamlit==1.29.0
+
+# Dependencies Streamlit / markdown / console
+rich==14.2.0
+markdown-it-py==4.0.0
+mdurl==0.1.2
+pygments==2.19.2
+
+# Core data science / utility packages (ringan & aman)
+numpy==2.2.6
+scipy==1.16.3
+matplotlib==3.10.7
+pillow==12.0.0
+opencv-python-headless==4.10.0.84
+requests==2.32.5
+python-dotenv==1.2.1
+
+# Optional utilities
+certifi==2025.10.5
+charset-normalizer==3.4.4
+colorama==0.4.6
+decorator==5.2.1
+executing==2.2.1
+filelock==3.20.0
+fonttools==4.60.1
+fsspec==2025.10.0
+idna==3.7
+packaging==25.0
+pyparsing==3.2.5
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+tqdm==4.67.1
+typing_extensions==4.15.0
+urllib3==2.5.0
+wcwidth==0.2.14
