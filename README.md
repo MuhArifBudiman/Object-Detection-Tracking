@@ -25,7 +25,7 @@ Dataset berisi label **`person`** untuk object detection dan tracking.
 
 ---
 ## 📂 Repository Structure
-.
+```bash
 ├── Images/ # Image/video testing samples
 ├── streamlit/
 │ ├── main.py # Streamlit UI for model testing
@@ -35,7 +35,7 @@ Dataset berisi label **`person`** untuk object detection dan tracking.
 ├── requirements.txt
 ├── test.ipynb # Testing and experiment notebook
 └── training_yolov9.ipynb # Training documentation notebook
-
+```
 ---
 ## 🔧 How to Run
 
